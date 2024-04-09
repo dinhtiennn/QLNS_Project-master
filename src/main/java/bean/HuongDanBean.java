@@ -12,4 +12,6 @@ public class HuongDanBean {
 //		3. git remote add origin https://github.com/dinhtiennn/QLNS_Project-master.git
 //		4.git pull --rebase origin master
 //		5.git add -A
+//		6.git commit -m 'messenger'
+//		7.git push  origin master
 }
