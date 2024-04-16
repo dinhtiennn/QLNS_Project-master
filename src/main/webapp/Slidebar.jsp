@@ -23,6 +23,9 @@
 	      <li class="nav-item">
 		    <a class="nav-link" href="#">Thông tin lương</a>
 		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Danh sách nhân viên</a>
+		  </li>
 		</ul>
 </body>
 </html>

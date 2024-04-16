@@ -1,7 +1,7 @@
 package bean;
 
 public class HuongDanBean {
-//	Các bước lấy source về:
+//Các bước lấy source về:
 //		1. vào git bash 
 //		2. git init
 //		3. git remote add origin https://github.com/dinhtiennn/QLNS_Project-master.git

@@ -88,4 +88,28 @@ public class nhanviendao {
 		
 		return nvb;
 	}
+	public void ThemNV(String TenDangNhap, String MatKhau) throws Exception{
+		ketnoiDB kn = new ketnoiDB();
+		kn.ketnoi();
+		String sql = "declare @newMaNV int, @newMaNV_Str nvarchar(10)\r\n"
+				+ "select @newMaNV = max(CAST(SUBSTRING(MaNV, 3,LEN(MaNV) - 2) as int)) + 1 from NhanVien\r\n"
+				+ "if @newMaNV < 100 set @newMaNV_Str = '0'+ cast(@newMaNV as nvarchar(10))\r\n"
+				+ "else set @newMaNV_Str = CAST(@newMaNV as nvarchar(10))\r\n"
+				+ "insert into NhanVien(MaNV,MaCV,TenDangNhap, MatKhau)\r\n"
+				+ "values ('NV'+ cast(@newMaNV_Str as nvarchar(10)) ,'NV',?,?)";
+	    PreparedStatement cmd = kn.cn.prepareStatement(sql);
+	    cmd.setString(1, TenDangNhap);
+	    cmd.setString(2,  MatKhau);
+	    cmd.executeUpdate();
+	    System.out.println("Da them nhan vien moi");
+	}
+//	public static void main(String[] args) {
+//		try {
+//			nhanviendao nvdao = new nhanviendao();
+//			nvdao.ThemNV("tandz", "123");
+//			
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//	}
 }
