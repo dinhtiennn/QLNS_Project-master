@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-20">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-20"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.5">
 		<attributes>
@@ -13,10 +9,17 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="D:/JavaLib/sqljdbc4-3.0.jar/sqljdbc4-3.0.jar">
+=======
+<<<<<<< HEAD
+	<classpathentry kind="lib" path="D:/LearningJava/JavaLib/sqljdbc4-3.0.jar">
+>>>>>>> 70280692b566543b1de55468f2faf4a81deadc8b
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+=======
+>>>>>>> e496c52eaf49f2c0daa0115d1c82cb392f51363e
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

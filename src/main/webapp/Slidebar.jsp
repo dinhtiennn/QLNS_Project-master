@@ -15,7 +15,7 @@
 		    <a class="nav-link" href="dangkilamviec">Đăng ký làm việc</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="#">Vắng</a>
+		    <a class="nav-link" href="dangkinghi">Đăng kí nghỉ</a>
 		  </li>
 		  <li class="nav-item">
 		    <a class="nav-link" href="#">Hồ sơ cần nộp</a>
