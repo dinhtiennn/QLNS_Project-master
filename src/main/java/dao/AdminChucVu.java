@@ -1,5 +1,7 @@
 package dao;
 
-public class AdminChucVu {
+import java.sql.PreparedStatement;
 
+public class AdminChucVu {
+	
 }

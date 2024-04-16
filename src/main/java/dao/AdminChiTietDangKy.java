@@ -31,5 +31,5 @@ public class AdminChiTietDangKy {
 	}
 	public void UpDateCTDK() throws Exception{
 		
-	}
+	} 
 }
