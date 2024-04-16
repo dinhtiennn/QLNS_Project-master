@@ -33,7 +33,7 @@ public class AdminChiTietDangKy {
 	public void UpDateChiTietDangKy(long mactdk, String madondk, String maloaidk, String maloaica, Date ngaydangky, boolean vang, String lydo) throws Exception{
 		ketnoiDB kn = new ketnoiDB();
 		kn.ketnoi();
-		String sql="UPDATE ChiTietDangKy SET MaDonDK = ?, MaLoaiDK= ?, MaNguoiDuyet= ?,MaLoaiCa = ?,NgayDangKy = ?, Vang= ?,LyDo=?    WHERE MaCTDK = ?";
+		String sql="UPDATE ChiTietDangKy SET MaDonDK = ?, MaLoaiDK= ?, MaNguoiDuyet= ?,MaLoaiCa = ?,NgayDangKy = ?, Vang= ?,LyDo=? WHERE MaCTDK = ?";
 		PreparedStatement cmd= kn.cn.prepareStatement(sql);
 		cmd.setString(1, madondk);
 		cmd.setString(2, maloaidk);
@@ -42,9 +42,19 @@ public class AdminChiTietDangKy {
 		SimpleDateFormat dd= new SimpleDateFormat("yyyy-MM-dd");
 		String tam= dd.format(ngaydangky);	// Doi ngay ra chuoi theo dd
 		Date n2= dd.parse(tam);
-		cmd.setDate(4, new java.sql.Date(n2.getTime()));
-		cmd.setBoolean(5, vang);
-		cmd.setString(6, lydo);
-		cmd.setLong(6, mactdk);;
+		cmd.setDate(5, new java.sql.Date(n2.getTime()));
+		cmd.setBoolean(6, vang);
+		cmd.setString(7, lydo);
+		cmd.setLong(8, mactdk);;
+		kn.cn.close();
+	}
+	public static void main(String[] args) {
+		AdminChiTietDangKy adctdk = new AdminChiTietDangKy();
+		try {
+			adctdk.UpDateChiTietDangKy(27, "DK36", "LDK3", "LC3", java.sql.Date.valueOf("2024-04-16"), false, "");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
