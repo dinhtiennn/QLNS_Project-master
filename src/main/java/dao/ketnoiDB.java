@@ -12,4 +12,3 @@ public class ketnoiDB {
 		System.out.println("Da Ket Noi");
 	}
 }
->>>>>>> 7a2a445df0b2a3ea4126469cf4624ae13dc3d7ee
