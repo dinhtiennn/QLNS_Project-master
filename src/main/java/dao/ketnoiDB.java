@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package dao;
 
 import java.sql.Connection;
@@ -12,3 +13,19 @@ public class ketnoiDB {
 		System.out.println("Da Ket Noi");
 	}
 }
+=======
+package dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class ketnoiDB {
+	public static Connection cn;
+	public void ketnoi() throws Exception {
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		String url ="jdbc:sqlserver://RIN\\SQLEXPRESS:1433;databaseName=QLNS; user=sa; password=123";
+		cn = DriverManager.getConnection(url);
+		System.out.println("Da Ket Noi");
+	}
+}
+>>>>>>> 7a2a445df0b2a3ea4126469cf4624ae13dc3d7ee
