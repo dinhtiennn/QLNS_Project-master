@@ -13,7 +13,7 @@ public class HuongDanBean {
 //		4.git pull --rebase origin master
 //		5.git add -A
 //		6.git reset -- filename1.java filename2.java  //commit  lên trừ filename1.java filename2.java
-		// vi dụ:  git reset -- src/main/java/dao/ketnoiDB.java  //đây là DB tùy từng máy nên k commit 
+// 		  vi dụ:  git reset -- src/main/java/dao/ketnoiDB.java  //đây là DB tùy từng máy nên k commit 
 //		7.git commit -m 'messenger'
 //		8.git push  origin master
 }

@@ -24,4 +24,19 @@ public class AdminHoSo {
 		kn.cn.close();
 		return ds;
 	}
+	public String getMaHS(String manv) throws Exception{
+		String mahs ="";
+		ketnoiDB kn = new ketnoiDB();
+		kn.ketnoi();
+		String sql = "select MaHS from HoSo where MaNV=?";
+		PreparedStatement cmd = kn.cn.prepareStatement(sql);
+		cmd.setString(1, manv);
+		ResultSet rs = cmd.executeQuery();
+		while(rs.next()) {
+			mahs = rs.getString("MaHS");
+		}
+		rs.close();
+		kn.cn.close();
+		return mahs;
+	}
 }

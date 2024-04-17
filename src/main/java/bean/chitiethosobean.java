@@ -65,5 +65,10 @@ public class chitiethosobean {
 	public void setMaHS(String maHS) {
 		MaHS = maHS;
 	}
+	@Override
+	public String toString() {
+		return "chitiethosobean [MaCTHS=" + MaCTHS + ", SLPhaiNop=" + SLPhaiNop + ", BatBuoc=" + BatBuoc + ", SLDaNop="
+				+ SLDaNop + ", GhiChu=" + GhiChu + ", MaGiayTo=" + MaGiayTo + ", MaHS=" + MaHS + "]" +"\n";
+	}
 	
 }

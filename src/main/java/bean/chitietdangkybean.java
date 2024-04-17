@@ -68,5 +68,11 @@ public class chitietdangkybean {
 	public void setLyDo(String lyDo) {
 		LyDo = lyDo;
 	}
+	@Override
+	public String toString() {
+		return "chitietdangkybean [MaCTDK=" + MaCTDK + ", MaDonDK=" + MaDonDK + ", MaLoaiDK=" + MaLoaiDK
+				+ ", MaNguoiDuyet=" + MaNguoiDuyet + ", MaLoaiCa=" + MaLoaiCa + ", NgayDangKy=" + NgayDangKy + ", LyDo="
+				+ LyDo + "]";
+	}
 	
 }
