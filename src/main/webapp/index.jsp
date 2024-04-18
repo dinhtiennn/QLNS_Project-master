@@ -28,7 +28,7 @@
    		<div class="container-fluid">
 	    	<%
 		    	LocalDate currentDate = LocalDate.now();
-		
+	    		nhanvienbean nhanvien = (nhanvienbean)session.getAttribute("nhanvien");
 		        // Tính toán ngày bắt đầu và kết thúc của tuần
 		        LocalDate startOfWeek = currentDate.with(DayOfWeek.MONDAY);
 		        LocalDate endOfWeek = currentDate.with(DayOfWeek.SATURDAY);
@@ -62,7 +62,7 @@
 	                    	startOfWeek = currentDate.with(DayOfWeek.MONDAY);
 		                	// In ra các ngày từ thứ 2 đến thứ 7 của tuần
                         	try {
-	            				
+                        		
                         		ArrayList<bangdangkybean> ds = (ArrayList<bangdangkybean>)request.getAttribute("bdk");
 			                	while (!startOfWeek.isAfter(endOfWeek)) {
 			                		int n =0;
@@ -72,8 +72,9 @@
 						                        <%if(bangdangkybean.getMaLoaiCa().equals("LC1")){
 						                        n=1;%>
 							       	        		<th style="width:14%" class="text-center">
-							       	        			<%=date %>
-														Sáng <%=(bangdangkybean.getMaLoaiDK().equals("LDK3"))?"(Làm thêm)":""%>
+							       	        		<a href="nv_dsnvlamtheongay?date=<%=date%>&lc=<%=bangdangkybean.getMaLoaiCa()%>">							       	        		
+							       	        			Sáng
+							       	        		</a>
 								                    </th>
 						                        <%}%>
 			            				<%}%>
@@ -97,7 +98,6 @@
 	                    	startOfWeek = currentDate.with(DayOfWeek.MONDAY);
 		                	// In ra các ngày từ thứ 2 đến thứ 7 của tuần
                         	try {
-	            				
                         		ArrayList<bangdangkybean> ds = (ArrayList<bangdangkybean>)request.getAttribute("bdk");
 			                	while (!startOfWeek.isAfter(endOfWeek)) {
 			                		int n =0;
@@ -107,8 +107,9 @@
 						                        <%if(bangdangkybean.getMaLoaiCa().equals("LC2")){
 						                        n=1;%>
 							       	        		<th style="width:14%" class="text-center">
-							       	        			<%=date %>
-														Chiều <%=(bangdangkybean.getMaLoaiDK().equals("LDK3"))?"(Làm thêm)":""%>
+							       	        			<a href="nv_dsnvlamtheongay?date=<%=date%>&lc=<%=bangdangkybean.getMaLoaiCa()%>">	       	        		
+							       	        				Chiều
+							       	        			</a>
 								                    </th>
 						                        <%}%>
 			            				<%}%>
@@ -142,8 +143,9 @@
 						                        <%if(bangdangkybean.getMaLoaiCa().equals("LC3")){
 						                        n=1;%>
 							       	        		<th style="width:14%" class="text-center">
-							       	        			<%=date %>
-														Tối <%=(bangdangkybean.getMaLoaiDK().equals("LDK3"))?"(Làm thêm)":""%>
+														<a href="nv_dsnvlamtheongay?date=<%=date%>&lc=<%=bangdangkybean.getMaLoaiCa()%>">			       	        		
+							       	        				Tối
+							       	        			</a>
 								                    </th>
 						                        <%}%>
 			            				<%}%>
